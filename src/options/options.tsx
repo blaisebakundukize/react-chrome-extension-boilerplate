@@ -3,11 +3,17 @@ import { createRoot } from 'react-dom/client';
 
 import './options.css';
 
-const test = <img src='icon.png' />;
+const App: React.FC<{}> = () => {
+  return (
+    <div>
+      <img src='icon.png' />
+    </div>
+  );
+};
 
 const container = document.createElement('div');
 document.body.appendChild(container);
 
 const root = createRoot(container);
 
-root.render(test);
+root.render(<App />);
